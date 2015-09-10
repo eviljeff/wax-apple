@@ -1,18 +1,31 @@
-window.addEventListener('DOMContentLoaded', function() {
-  var body = document.querySelector('body');
-  var fxosBanner = document.createElement('div');
-  fxosBanner.classList.add('fxos-banner');
-  var bannerText = document.createElement('p');
-  var closeBtn = document.createElement('button');
+if (document.documentElement) {
+  initialize();
+}
+else {
+  window.addEventListener('DOMContentLoaded', initialize);
+}
 
-  fxosBanner.appendChild(bannerText);
-  fxosBanner.appendChild(closeBtn);
-  body.appendChild(fxosBanner);
+function initialize() {
+  if (document.querySelector('.fxos-banner')) {
+    // Already injected, abort.
+    return;
+  } else {
+    var body = document.querySelector('body');
+    var fxosBanner = document.createElement('div');
+    fxosBanner.classList.add('fxos-banner');
+    var bannerText = document.createElement('p');
+    var closeBtn = document.createElement('button');
 
-  closeBtn.textContent = 'X';
-  bannerText.textContent = 'Wow, you have an extension installed!';
+    fxosBanner.appendChild(bannerText);
+    fxosBanner.appendChild(closeBtn);
+    //body.appendChild(fxosBanner);
+	body.insertBefore(fxosBanner, body.firstChild)
 
-  closeBtn.onclick = function() {
-  	fxosBanner.parentNode.removeChild(fxosBanner);
+    closeBtn.textContent = 'X';
+    bannerText.textContent = 'baaa maak. som nam naa.';
+
+    closeBtn.onclick = function() {
+      fxosBanner.parentNode.removeChild(fxosBanner);
+    }
   }
-});
+}

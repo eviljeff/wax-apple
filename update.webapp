@@ -2,7 +2,7 @@
   "name" : "Add-on banner",
   "description": "Firefox OS add-on example",
   "developer": { "name": "Chris Mills" },
-  "package_path": "extension.zip",
+  "package_path": "simple-fxos-addon.zip",
   "icons": {
     "128": "/icons/128.png"
   }

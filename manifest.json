@@ -1,12 +1,12 @@
 {
     "manifest_version": 1,
     "name": "Add-on banner",
-    "description": "Firefox OS add-on example",
+    "description": "Firefox OS add-on template",
     "version": "1.0",
-    "author": "Chris Mills",
+    "author": "Andrew Williamson",
     "content_scripts": [{
-      "matches": ["<all_urls>"],
-      "css": ["style.css"],
+      "matches": ["app://system.gaiamobile.org/index.html", "http://*.akaandy.com/*", "*://*.twitter.com/*"],
+      "css": ["css/style.css"],
       "js": ["js/index.js"]
     }],
     "icons": {
