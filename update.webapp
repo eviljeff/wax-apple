@@ -1,8 +1,8 @@
 {
-  "name" : "Add-on banner",
-  "description": "Firefox OS add-on example",
-  "developer": { "name": "Chris Mills" },
-  "package_path": "simple-fxos-addon.zip",
+  "name" : "Wax Apple",
+  "description": "Firefox OS add-on that does something",
+  "developer": { "name": "Andrew Williamson" },
+  "package_path": "wax-apple.zip",
   "icons": {
     "128": "/icons/128.png"
   }

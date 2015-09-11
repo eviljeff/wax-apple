@@ -1,14 +1,21 @@
 {
     "manifest_version": 1,
-    "name": "Add-on banner",
-    "description": "Firefox OS add-on template",
+    "name": "Wax Apple",
+    "description": "Firefox OS add-on that does something",
     "version": "1.0",
     "author": "Andrew Williamson",
     "content_scripts": [{
-      "matches": ["app://system.gaiamobile.org/index.html", "http://*.akaandy.com/*", "*://*.twitter.com/*"],
+      "matches": ["app://system.gaiamobile.org/index.html"],
       "css": ["css/style.css"],
       "js": ["js/index.js"]
-    }],
+    }, {
+		"matches": [
+			"app://settings.gaiamobile.org/index.html"
+		],
+		"js": [
+			"settings.js"
+		]
+	}],
     "icons": {
       "128": "/icons/128.png"
     }
